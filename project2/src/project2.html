@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw triangle with specification of vertex color</title>
+  </head>
+
+  <body onload="main()" onresize="winResize()">
+  	
+    <canvas id="webgl" width="1000" height="500">
+		Please use a browser that supports "canvas"
+    </canvas>
+	
+	<canvas id="help" style ="position:absolute; top:220px; left:20px"  width="600" height="300">
+	</canvas>
+    
+	<p>
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+		When users click the button, HTML calls JavaScript functions
+			"spinDown()", "runStop()" and "spinUp()"   -->
+      <button style="position:absolute; bottom:40px; left:90px; type="button" onclick="spinDown()">Spin << </button>
+	  <button style="position:absolute; bottom:40px; left:150px; type="button" onclick="runStop()">Run/Stop </button>
+      <button style="position:absolute; bottom:40px; left:220px; type="button" onclick="spinUp()">Spin >> </button>
+      <button style="position:absolute; bottom:20px; left:90px; type="button" onclick="treeView()">Tree View >> </button>
+      <button style="position:absolute; bottom:20px; left:180px; type="button" onclick="originView()">Origin View >> </button>
+	  <div style="position:absolute; bottom:60px; left:60px; font-family:Arial;color:red;font-size: 30px">Press 'H' for HELP </div>	
+    </p>
+	
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../lib/cuon-matrix-mod.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="project2.js"></script>
+  </body>
+</html>

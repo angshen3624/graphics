@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw triangle with specification of vertex color</title>
+  </head>
+
+  <body onload="main()" onresize="winResize()">
+  	
+    <canvas id="webgl" width=window.innerWidth height=window.innerHeight>
+		Please use a browser that supports "canvas"
+    </canvas>
+	
+	<canvas id="help" style ="position:absolute; top:220px; left:20px"  width="600" height="300">
+	</canvas>
+    
+	<p>
+		<!--BUTTONS: commands below create HTML push-buttons with labels
+			Spin <<, runStop, and Spin >>.  
+		When users click the button, HTML calls JavaScript functions
+			"spinDown()", "runStop()" and "spinUp()"   -->
+      <button style="position:absolute; bottom:40px; left:90px; type="button" onclick="spinDown()">Spin << </button>
+	  <button style="position:absolute; bottom:40px; left:150px; type="button" onclick="runStop()">Run/Stop </button>
+      <button style="position:absolute; bottom:40px; left:220px; type="button" onclick="spinUp()">Spin >> </button>
+      <button style="position:absolute; bottom:20px; left:90px; type="button" onclick="treeView()">Tree View</button>
+      <button style="position:absolute; bottom:20px; left:180px; type="button" onclick="originView()">Origin View</button>
+	  
+	  <button style="position:absolute; top:20px; right:120px; type="button" onclick="light0OnOff()">Light0 on/off</button>
+	  <button style="position:absolute; top:40px; right:120px; type="button" onclick="ambient0OnOff()">Ambient0 on/off</button>
+	  <button style="position:absolute; top:60px; right:120px; type="button" onclick="diffuse0OnOff()">Diffuse0 on/off</button>
+	  <button style="position:absolute; top:80px; right:120px; type="button" onclick="specular0OnOff()">Specular0 on/off</button>
+	  
+	  <button style="position:absolute; top:20px; right:0px; type="button" onclick="light1OnOff()">Light1 on/off</button>
+	  <button style="position:absolute; top:40px; right:0px; type="button" onclick="ambient1OnOff()">Ambient1 on/off</button>
+	  <button style="position:absolute; top:60px; right:0px; type="button" onclick="diffuse1OnOff()">Diffuse1 on/off</button>
+	  <button style="position:absolute; top:80px; right:0px; type="button" onclick="specular1OnOff()">Specular1 on/off</button>
+	  <button style="position:absolute; top:120px; right:0px; type="button" onclick="light1_X_Add()">light1_X_Add</button>
+	  <button style="position:absolute; top:140px; right:0px; type="button" onclick="light1_X_Sub()">light1_X_Sub</button>
+	  <button style="position:absolute; top:160px; right:0px; type="button" onclick="light1_Y_Add()">light1_Y_Add</button>
+	  <button style="position:absolute; top:180px; right:0px; type="button" onclick="light1_Y_Sub()">light1_Y_Sub</button>
+	  <button style="position:absolute; top:200px; right:0px; type="button" onclick="light1_Z_Add()">light1_Z_Add</button>
+	  <button style="position:absolute; top:220px; right:0px; type="button" onclick="light1_Z_Sub()">light1_Z_Sub</button>
+	  
+	  
+	  
+	  
+	  <div style="position:absolute; bottom:60px; left:60px; font-family:Arial;color:red;font-size: 30px">Press 'H' for HELP </div>	
+    </p>
+	
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../lib/cuon-matrix-mod.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="../lib/materials_Ayerdi.js"></script>
+    <script src="project3.js"></script>
+  </body>
+</html>
